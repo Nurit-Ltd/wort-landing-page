@@ -63,16 +63,62 @@ h6 {
   font-family: "Fira Sans Extra Condensed", serif;
 }
 
-/* Container */
+/* Container & Sections*/
 .container {
-  max-width: 1280px;
+  max-width: 1252px;
   margin: 0 auto;
-  padding: 0 1rem;
+  width: 100%;
 }
+
+.mini-container {
+  max-width: 783px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+section {
+  width: 100%;
+}
+
+
+/* Header part CSS start */
+
+
+
+.header-list-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.375rem;
+  margin-top: 5.5625rem;
+  font-size: 1.125rem;
+
+  .list-items-wrapper {
+    display: flex;
+    gap: 2.5rem;
+    justify-content: center;
+
+    .list-item {
+      .tick-icon {
+        width: 0.6875rem;
+      }
+    }
+  }
+
+
+}
+
+
+
 
 .logo {
   text-align: center;
-  padding: 1rem 0;
+  margin-top: 2.625rem;
+
+  img {
+    width: auto;
+    height: 2.125rem;
+  }
 }
 
 .title_header {
@@ -81,5 +127,529 @@ h6 {
   font-weight: 700;
   color: var(--primary-color);
   text-align: center;
-  margin-bottom: 1rem;
+  margin-top: 1.5rem;
 }
+
+
+/* Header part CSS end */
+
+
+/* pricing part CSS start */
+.cards-n-notice {
+  display: flex;
+  flex-direction: column;
+  gap: 2.125rem;
+  align-items: center;
+  width: 100%;
+
+  .notice {
+    font-family: "Fira Sans Extra Condensed", serif;
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+    color: var(--text-color);
+    text-align: center;
+  }
+
+  .pricing-cards-wrapper {
+    margin-top: 4.25rem;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.3125rem;
+    align-items: stretch;
+    max-width: 100%;
+
+    @media (min-width: 576px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (min-width: 992px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .pricing-card {
+      background-color: var(--background-color);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 1.5rem;
+      padding: 2rem;
+      border: 0.125rem solid transparent;
+      border-radius: 1.5rem;
+      background-color: var(--background-color);
+      box-shadow: 0rem 0rem 0.625rem 0rem rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+
+      .pricing-card-header {
+        .pricing-title {
+          font-family: "SF Pro Text", sans-serif;
+          font-size: 1.5rem;
+          font-weight: 700;
+          color: var(--text-color);
+          text-align: center;
+          margin-bottom: 1.5rem;
+        }
+      }
+
+      .pricing-card-body {
+        padding-top: 1.5rem;
+        border-top: 0.0625rem solid #E6F3FA;
+
+        .pricing-features {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+
+          .single-feature {
+            display: flex;
+            gap: 0.375rem;
+            align-items: start;
+
+            .feature-icon {
+              height: 0.5rem;
+              margin-top: 0.5rem;
+            }
+
+            .feature-text {
+              font-size: 1rem;
+              line-height: 1.5rem;
+              color: var(--text-color);
+            }
+          }
+        }
+      }
+
+      .pricing-card-footer {
+        padding-top: 1.5rem;
+        border-top: 0.0625rem solid #E6F3FA;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+
+        .pricing-price {
+          display: flex;
+          align-items: center;
+          font-family: "SF Pro Text", sans-serif;
+          font-size: 1.5rem;
+          font-weight: 700;
+          line-height: 1.75rem;
+
+          .pricing-duration {
+
+            font-size: 1rem;
+            line-height: 1.25rem;
+            font-weight: 400;
+            color: var(--text-color);
+          }
+
+        }
+
+        .btn-n-country-text {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+
+          .country-text {
+            font-size: 1rem;
+            line-height: 1.5rem;
+            font-weight: 400;
+            color: #808080;
+          }
+        }
+
+        .order-button {
+          border-radius: 0.125rem;
+          background-color: var(--primary-color);
+          color: var(--background-color);
+          font-family: "Fira Sans Extra Condensed", serif;
+          font-size: 1.125rem;
+          font-weight: 700;
+          line-height: 1.5rem;
+          display: flex;
+          padding: 0.25rem;
+          gap: 0.5rem;
+          width: 100%;
+          justify-content: center;
+          align-items: center;
+          border: none;
+          cursor: pointer;
+          transition: all 0.3s ease;
+
+          a {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            color: inherit;
+            width: 100%;
+
+          }
+
+          &:hover {
+            background-color: #005b9f;
+          }
+
+          .chevron-icon {
+            aspect-ratio: 1;
+            width: 1rem;
+          }
+        }
+      }
+
+      &:hover {
+        border: 0.125rem solid var(--primary-color);
+      }
+    }
+
+    .recommended-card {
+      border: 0.125rem solid var(--primary-color);
+      position: relative;
+
+
+      &::before {
+        content: "Meistgewählt";
+        position: absolute;
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%, -100%);
+        z-index: -1;
+        background-color: var(--primary-color);
+        color: var(--background-color);
+        padding: 0.1875rem 2.25rem;
+        border-radius: 0.125rem 0.125rem 0rem 0rem;
+        font-family: "SF Pro Text", sans-serif;
+        font-size: 1rem;
+        line-height: 1.25rem;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+
+
+
+/* pricing part CSS end */
+
+
+
+
+/* Review part CSS start */
+
+
+.review-card-wrapper {
+  margin-top: 2.625rem;
+
+  .review-card {
+    display: flex;
+    background-color: rgba(255, 149, 28, 0.12);
+    border-radius: 1.25rem;
+    overflow: hidden;
+
+    .review-img-n-place {
+      position: relative;
+
+      .review-image-wrapper {
+        max-width: 27.125rem;
+        height: 100%;
+        width: 100%;
+
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          mix-blend-mode: multiply;
+          background: linear-gradient(180deg, rgba(0, 0, 0, 0.14) 64.54%, rgba(0, 0, 0, 0.70) 86.35%), lightgray 50% / cover no-repeat;
+        }
+
+        .review-image {
+          max-width: 27.125rem;
+          width: 27.125rem;
+          height: 100%;
+          object-fit: cover;
+
+
+
+        }
+      }
+
+      .review-place-text {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        position: absolute;
+        bottom: 1.5rem;
+        right: 2.25rem;
+
+        .review-place {
+          font-family: "Fira Sans Extra Condensed", serif;
+          font-size: 1.625rem;
+          line-height: 1.625rem;
+          font-weight: 700;
+          text-decoration: uppercase;
+          color: #ff951c;
+        }
+
+        .review-location {
+          font-family: "Fira Sans Extra Condensed", serif;
+          font-size: 1.5rem;
+          line-height: 1.75rem;
+          font-weight: 500;
+          color: var(--background-color);
+        }
+      }
+    }
+
+    .review-content {
+      padding: 2.75rem 4.375rem 2.125rem 2.375rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .review-text {
+        font-family: "Fira Sans Extra Condensed", serif;
+        font-size: 1.75rem;
+        line-height: 2.375rem;
+        font-weight: 400;
+        font-style: italic;
+        color: var(--text-color);
+      }
+
+      .review-author {
+        font-family: "Fira Sans Extra Condensed", serif;
+        font-size: 1.5rem;
+        line-height: 1.75rem;
+        font-weight: 400;
+        color: var(--text-color);
+        text-align: right;
+
+      }
+    }
+
+  }
+}
+
+
+/* Review part CSS end */
+
+
+
+/* Statistics part CSS start */
+.stats-wrapper {
+  display: flex;
+  gap: 1.75rem;
+  padding: 2.5rem 0.0625rem 2.5rem 0.0625rem;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(249, 249, 249, 0.9);
+  border-radius: 1rem;
+  margin-top: 2.625rem;
+
+
+  .single-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+    align-items: center;
+
+    &:first-child {
+      max-width: 15.4375rem;
+      width: 100%;
+      text-align: center;
+    }
+
+    &:nth-child(2) {
+      max-width: 15.5rem;
+      width: 100%;
+      text-align: center;
+    }
+
+    &:nth-child(3) {
+      max-width: 12.875rem;
+      width: 100%;
+      text-align: center;
+    }
+
+    .stats-icon {
+
+      img {
+        height: 5.4375rem;
+        width: auto;
+      }
+    }
+
+    .stats-text {
+      font-family: "SF Pro Text", sans-serif;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      font-weight: 400;
+      color: var(--text-color);
+
+      .bold-text {
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+
+/* Statistics part CSS end */
+
+
+
+/* YouTube embeded video CSS start */
+
+
+
+.youtube-video {
+  margin-top: 2.625rem;
+  max-height: 27.5rem;
+  width: 100%;
+  height: 27.5rem;
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.9375rem;
+  }
+
+}
+
+
+/* YouTube embeded video CSS end */
+
+
+/* CTA part CSS start */
+
+.cta-wrapper {
+  display: flex;
+  align-items: self-end;
+  margin-top: 2.625rem;
+  background-color: var(--primary-color);
+  border-radius: 1rem;
+
+  .cta-image-wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 1.854rem;
+
+    .cta-image {
+      height: 100%;
+      width: auto;
+    }
+  }
+
+  .cta-text-wrapper {
+    padding: 3.225rem 3.65625rem 2.7125rem 3.0625rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.1875rem;
+
+    .cta-title {
+      font-family: "Fira Sans Extra Condensed", serif;
+      font-size: 2.5rem;
+      line-height: 2.375rem;
+      font-weight: 600;
+      color: var(--background-color);
+    }
+
+    .cta-text {
+      font-family: "Fira Sans Extra Condensed", serif;
+      font-size: 2rem;
+      line-height: 1.875rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      color: var(--background-color);
+    }
+  }
+
+}
+
+
+
+/* CTA part CSS end */
+
+
+/* Image & Text card CSS start */
+
+.image-n-cards-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2.625rem;
+
+  .image-n-card {
+    background-color: var(--gray-background-color);
+    border-radius: 1rem;
+    display: flex;
+
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .card-image {
+
+      img {
+        width: auto;
+        height: 20rem;
+      }
+    }
+
+    .card-texts {
+      font-family: "Fira Sans Extra Condensed", serif;
+      padding: 1rem 2rem 0 1.5rem;
+      display: flex;
+      flex-direction: column;
+
+
+      .card-category {
+        text-transform: uppercase;
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+        font-weight: 700;
+        color: var(--primary-color);
+      }
+
+      .card-title {
+        font-size: 1.375rem;
+        line-height: 1.5rem;
+        font-weight: 700;
+        color: var(--text-color);
+        margin-top: 0.5rem;
+      }
+
+      .card-text {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        font-weight: 400;
+        color: var(--text-color);
+        margin-top: 1rem;
+
+        a {
+          text-decoration: underline;
+          text-decoration-skip-ink: none;
+          color: var(--primary-color);
+          font-family: inherit;
+          font-size: inherit;
+
+        }
+      }
+    }
+  }
+}
+
+
+/* Image & Text card CSS end */
