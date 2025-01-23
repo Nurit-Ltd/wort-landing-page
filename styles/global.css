@@ -1143,8 +1143,6 @@ footer {
     padding: 2.5rem !important;
 
     .single-stats {
-      max-width: 100% !important;
-      width: 100% !important;
       text-align: center !important;
 
       .stats-icon {
