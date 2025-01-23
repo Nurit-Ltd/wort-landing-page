@@ -197,6 +197,14 @@ section {
           flex-direction: column;
           gap: 1rem;
 
+          .single-feature.country-list-text {
+            display: none;
+            font-size: 1rem;
+            line-height: 1.5rem;
+            font-weight: 400;
+            color: #808080;
+          }
+
           .single-feature {
             display: flex;
             gap: 0.375rem;
@@ -1026,12 +1034,24 @@ footer {
     .pricing-card-body {
       border: none !important;
       padding-top: 0.5rem !important;
-      max-width: 12.5rem !important;
+      max-width: 12.8125rem !important;
 
       .pricing-features {
-        max-width: 12.375rem !important;
+        max-width: 100% !important;
+        width: 100% !important;
+
+
+        .single-feature.country-list-text {
+          display: block !important;
+          font-size: 1rem !important;
+          line-height: 1.5rem !important;
+          font-weight: 400 !important;
+          color: #808080 !important;
+        }
 
         .single-feature {
+
+
           .feature-text {
 
             font-size: 0.875rem !important;
@@ -1068,7 +1088,8 @@ footer {
           width: 100% !important;
         }
 
-        .button-text {
+        .button-text,
+        .country-text {
           display: none;
         }
       }
