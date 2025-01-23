@@ -695,17 +695,7 @@ section {
     margin-top: 2.625rem;
     grid-template-columns: repeat(1, 1fr);
 
-    @media (min-width: 576px) {
-      grid-template-columns: repeat(2, 1fr);
-    }
 
-    @media (min-width: 768px) {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    @media (min-width: 992px) {
-      grid-template-columns: repeat(4, 1fr);
-    }
 
 
 
@@ -987,6 +977,25 @@ footer {
 /* Section & Containers */
 
 
+/* Header part start */
+
+@media (max-width: 768px) {
+  .header-list-items {
+    display: none;
+  }
+
+  .logo {
+    margin-top: 1.625rem !important;
+  }
+
+  .title_header {
+    margin-top: 2.5rem !important;
+  }
+}
+
+/* Header part end */
+
+
 /* Pricing cards start */
 
 
@@ -1017,13 +1026,17 @@ footer {
     .pricing-card-body {
       border: none !important;
       padding-top: 0.5rem !important;
+      max-width: 12.5rem !important;
 
       .pricing-features {
-        max-width: 12.375rem;
+        max-width: 12.375rem !important;
 
         .single-feature {
-          font-size: 0.875rem !important;
-          line-height: 1.05rem !important;
+          .feature-text {
+
+            font-size: 0.875rem !important;
+            line-height: 1.05rem !important;
+          }
         }
       }
     }
@@ -1031,6 +1044,7 @@ footer {
     .pricing-card-footer {
       flex-direction: row !important;
       padding: 0 !important;
+      gap: 1rem !important;
 
       .pricing-price {
         flex-direction: column !important;
@@ -1085,10 +1099,6 @@ footer {
 /* Review part start */
 
 @media (max-width:768px) {
-  .header-list-items {
-    display: none;
-  }
-
   .review-card {
     flex-direction: column !important;
 
@@ -1286,6 +1296,24 @@ footer {
 
 
 /* subscription part start */
+
+@media (min-width: 576px) {
+  .subscription-cards-wrapper {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .subscription-cards-wrapper {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .subscription-cards-wrapper {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+}
 
 @media (max-width:768px) {
   .subscription-wrapper {
