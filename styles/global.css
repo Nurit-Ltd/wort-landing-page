@@ -311,7 +311,7 @@ section {
     }
 
     .recommended-card {
-      border: 0.125rem solid var(--primary-color);
+      border: 0.125rem solid var(--primary-color) !important;
       position: relative;
 
 
@@ -606,6 +606,7 @@ section {
     }
 
     .card-image {
+      display: flex;
 
       img {
         width: auto;
@@ -1013,11 +1014,26 @@ footer {
     gap: 1.0625rem !important;
   }
 
+  .recommended-card {
+
+    &::before {
+      top: 1rem !important;
+      left: 6.1875rem !important;
+      z-index: 0 !important;
+      padding: 0.0625rem 0.5rem !important;
+      transform: none !important;
+
+    }
+  }
+
+
   .pricing-card {
     flex-direction: row !important;
     padding: 0 !important;
     overflow: hidden !important;
     gap: 0.75rem !important;
+    border-width: 0rem !important;
+    border-radius: 0.625rem !important;
 
     .card-head-n-body {
       padding: 0.75rem 0 1rem 1rem !important;
@@ -1065,6 +1081,8 @@ footer {
       flex-direction: row !important;
       padding: 0 !important;
       gap: 1rem !important;
+      height: calc(100% + 4px);
+      margin-top: -0.25rem;
 
       .pricing-price {
         flex-direction: column !important;
